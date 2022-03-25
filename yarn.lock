@@ -1446,9 +1446,9 @@ locklift@^1.4.5:
     ton-client-js "^0.28.1"
     underscore "^1.13.1"
 
-locklift@ilyar/ton-locklift:
+locklift@broxus/ton-locklift:
   version "1.5.2"
-  resolved "https://codeload.github.com/ilyar/ton-locklift/tar.gz/5ff3033c06c312219f95ee7b30137c6069201588"
+  resolved "https://codeload.github.com/broxus/ton-locklift/tar.gz/028ed8b5f19a571b0e9dc3f703f3e3067ba74f43"
   dependencies:
     "@broxus/contracts" "^1.0.3"
     "@tonclient/core" "^1.28.0"

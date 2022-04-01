@@ -21,12 +21,13 @@
   "scripts": {
     "nvm": "echo $npm_package_engines_node | cut -d'=' -f2",
     "postinstall": "yarn everdev-setup",
-    "local-reset": "everdev se reset",
+    "local-node-docker-reset": "everdev se reset",
+    "local-node-metal-reset": "evernode-se restart",
     "everdev-setup": "everdev sol set --compiler 0.57.3 --linker 0.14.39",
     "contract-build": "locklift build --config locklift.config.js",
     "contract-deploy-local": "locklift run --config locklift.config.js --network local --script scripts/1-deploy-sample.js",
-    "contract-test": "yarn local-reset && locklift test --config locklift.config.js --network local",
-    "test": "yarn contract-test"
+    "contract-test": "locklift test --config locklift.config.js --network local",
+    "test": "yarn local-node-metal-reset && yarn contract-test"
   },
   "engines": {
     "node": ">=16"
@@ -35,5 +36,8 @@
     "chai": "^4.3.6",
     "everdev": "^1.1.1",
     "locklift": "broxus/ton-locklift"
+  },
+  "dependencies": {
+    "@everscale-actions/evernode-se": "^0.30.1-fix2"
   }
 }

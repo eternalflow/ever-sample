@@ -21,6 +21,6 @@ yarn install
 
 ```shell
 yarn contract-build
-yarn test
+yarn demo
 ```
 

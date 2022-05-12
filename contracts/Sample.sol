@@ -2,32 +2,21 @@ pragma ton-solidity >= 0.35.0;
 pragma AbiHeader expire;
 pragma AbiHeader pubkey;
 
+import "@broxus/contracts/contracts/libraries/MsgFlag.sol";
+
+
 contract Sample {
     uint16 static _nonce;
 
-    uint state;
-
-    event StateChange(uint _state);
-
-    constructor(uint _state) public {
+    constructor() public {
         tvm.accept();
-
-        setState(_state);
     }
 
-    function setState(uint _state) public {
-        tvm.accept();
-        state = _state;
-
-        emit StateChange(_state);
-    }
-
-    function getDetails()
-        external
-        view
-    returns (
-        uint _state
-    ) {
-        return state;
+    function touch() public view {
+        tvm.rawReserve(1 ever, 2);
+        msg.sender.transfer({
+            value: 0,
+            flag: MsgFlag.ALL_NOT_RESERVED
+        });
     }
 }

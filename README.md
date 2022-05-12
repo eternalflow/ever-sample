@@ -24,8 +24,3 @@ yarn contract-build
 yarn test
 ```
 
-### Deploy
-
-```shell
-yarn contract-deploy-local
-```

@@ -34,6 +34,7 @@
   "devDependencies": {
     "chai": "^4.3.6",
     "everdev": "^1.1.1",
-    "locklift": "broxus/ton-locklift"
+    "locklift": "broxus/ton-locklift",
+    "ton-contracts": "broxus/ton-contracts"
   }
 }

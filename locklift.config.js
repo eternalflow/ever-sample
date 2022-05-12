@@ -35,7 +35,7 @@ module.exports = {
         dev: {
             ton_client: {
                 network: {
-                    server_address: 'https://net.ton.dev/',
+                    server_address: 'https://eri01.net.everos.dev',
                 },
             },
             giver: {

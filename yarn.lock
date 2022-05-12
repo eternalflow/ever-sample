@@ -2222,6 +2222,15 @@ ton-client-js@^0.28.1:
     opentracing "0.14.4"
     subscriptions-transport-ws "0.9.18"
 
+ton-contracts@broxus/ton-contracts:
+  version "1.0.4"
+  resolved "https://codeload.github.com/broxus/ton-contracts/tar.gz/58a59f1ac959358b311de485fb60f535acb5eee8"
+  dependencies:
+    chai "^4.3.4"
+    chai-as-promised "^7.1.1"
+    locklift "^1.4.5"
+    mocha-logger "^1.0.7"
+
 tough-cookie@~2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.5.0.tgz#cd9fb2a0aa1d5a12b473bd9fb96fa3dcff65ade2"
